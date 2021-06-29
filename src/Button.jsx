@@ -1,7 +1,10 @@
 import React from "react";
+import { useCount } from "./contexts/CounterContext";
 
-function Button({ setter }) {
-  return <button onClick={() => setter((toto) => toto + 1)}>increment</button>;
+function Button() {
+  const { increment } = useCount();
+
+  return <button onClick={increment}>increment</button>;
 }
 
 export default Button;

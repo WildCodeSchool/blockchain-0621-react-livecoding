@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useCount } from "./contexts/CounterContext";
 
-function Counter({ count }) {
+function Counter() {
+  const { count } = useCount();
   useEffect(() => {
     console.log("Counter re-render");
   });
